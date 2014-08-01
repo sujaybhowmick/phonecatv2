@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 var app = angular.module('phonecatv2App', ['ngResource', 'ui.router', 
-                'phones.phoneModule']);
+                'phones.phoneModule', 'common.commonModule']);
 
 
 app.config(['$stateProvider', '$urlRouterProvider',
