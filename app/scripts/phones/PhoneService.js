@@ -1,21 +1,18 @@
 'use strict';
 
-function PhoneService($q, $resource){
-   
 
-   this.get = function(){
-        var baseUrl = 'https://api.mongolab.com/api/1/databases/phonecatdb',
-    apiKey = 'WDEbDbrj6btv1Fb8n5E4NPNNQdiICGtD';
+function PhoneService($q, $resource, configuration){
 
-        return $resource(baseUrl + '/collections/phone/:id',{id: '@id', apiKey: apiKey});
+   this.get = function(id){
+        return $resource(configuration.restUrl + '/collections/phone/:id',
+                     {id: '@id', apiKey: configuration.apiKey});
     };
 
 
-    this.listAll = function(){
+    this.listAll = function(params){
        var phone = this.get(),
        deferred =  $q.defer();
        phone.query(function(phones){
-          console.log(phones);
           deferred.resolve(phones);
        }, function(){
             deferred.reject('Unable to load phones')

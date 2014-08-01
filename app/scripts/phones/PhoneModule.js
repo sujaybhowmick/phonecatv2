@@ -1,9 +1,9 @@
 
-    var phoneModule = angular.module('phones.phoneModule', ['ngResource']);
+    var phoneModule = angular.module('phones.phoneModule', []);
 
-    phoneModule.service('phoneService', ['$q', '$resource', 
-        function($q, $resource){
-            return new PhoneService($q, $resource);
+    phoneModule.service('phoneService', ['$q', '$resource', 'configuration',
+        function($q, $resource, configuration){
+            return new PhoneService($q, $resource, configuration);
         }
     ]);
 
