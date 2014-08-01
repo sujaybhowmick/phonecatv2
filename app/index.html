@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" ng-app="phonecatv2App">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">PhoneCatApp v2</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                    <!--<li ng-class="{ active: $state.includes('transactions') }">
+                        <a ui-sref="transactions">Transactions</a>
+                    </li>-->
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div ui-view></div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/Class.js/Class.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/phones/PhoneController.js"></script>
+    <script src="scripts/phones/PhoneService.js"></script>
+    <script src="scripts/phones/PhoneModel.js"></script>
+    <script src="scripts/phones/PhoneModule.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+ 
+</html>
