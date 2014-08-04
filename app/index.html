@@ -34,6 +34,9 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
+    <div class="container">
+        <div ui-view="messages"></div>
+    </div>
 
     <div ui-view></div>
 
@@ -47,14 +50,21 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- Common Module -->
     <script src="scripts/common/Properties.js"></script>
     <script src="scripts/common/Configuration.js"></script>
+    <script src="scripts/common/MessageService.js"></script>
+    <script src="scripts/common/MessageDirective.js"></script>
     <script src="scripts/common/CommonModule.js"></script>
+
+    <!-- Phone Module -->
     <script src="scripts/phones/PhoneController.js"></script>
     <script src="scripts/phones/PhoneService.js"></script>
     <script src="scripts/phones/PhoneModel.js"></script>
     <script src="scripts/phones/PhoneModule.js"></script>
+
+    <!-- Common App boostrap -->
     <script src="scripts/app.js"></script>
   </body>
  
