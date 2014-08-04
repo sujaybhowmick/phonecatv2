@@ -13,14 +13,14 @@ function Properties(){
             dataSource:{
                 baseUrl: 'https://api.mongolab.com/api/1/databases/',
                 database: 'phonecatdb',
-                apiKey: 'WDEbDbrj6btv1Fb8n5E4NPNNQdiICGtD'
+                apiKey: '<replace with your api key>'
             }
         },
         production:{
             dataSource:{
                 baseUrl: 'https://api.mongolab.com/api/1/databases/',
                 database: 'phonecatdb',
-                apiKey: 'WDEbDbrj6btv1Fb8n5E4NPNNQdiICGtD'
+                apiKey: '<replace with your api key>'
             }
         },
         environment: 'development'
