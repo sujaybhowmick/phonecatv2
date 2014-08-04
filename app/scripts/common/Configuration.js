@@ -2,24 +2,12 @@
 
 function Configuration(properties){
 
-    switch(properties.environment){
-
-        case 'development':
-            properties.restUrl = properties.development.dataSource.baseUrl +
-                                properties.development.dataSource.database;
-            properties.apiKey = properties.development.dataSource.apiKey;
-        case 'test':
-            properties.restUrl = properties.test.dataSource.baseUrl +
-                                properties.test.dataSource.database;
-            properties.apiKey = properties.test.dataSource.apiKey;
-        case 'production':
-            properties.restUrl = properties.production.dataSource.baseUrl +
-                                properties.production.dataSource.database;
-            properties.apiKey = properties.production.dataSource.apiKey;
-        default:
-            properties.restUrl = properties.development.dataSource.baseUrl +
-                                properties.development.dataSource.database;
-            properties.apiKey = properties.development.dataSource.apiKey;
-    }
+    properties.restUrl = eval('properties.' +  properties.environment + 
+                            '.dataSource.baseUrl') + 
+                        eval('properties.' + properties.environment +
+                            '.dataSource.database');
+    properties.apiKey = eval('properties.' + properties.environment + 
+                            '.dataSource.apiKey');
+    
     return properties;
 }
